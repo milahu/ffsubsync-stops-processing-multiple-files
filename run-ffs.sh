@@ -2,11 +2,11 @@
 
 #set -x
 
-# pysubs2.exceptions.UnknownFPSError: Framerate was not specified and cannot be read from the MicroDVD file.
-sub_files=(bad.sub good.srt)
+# fixed by https://github.com/smacke/ffsubsync/issues/176#issuecomment-1694423922
+#sub_files=(bad.sub good.srt)
 
 # pysubs2.exceptions.UnknownFPSError: Framerate was not specified and cannot be read from the MicroDVD file.
-#sub_files=(bad.sub good.sub)
+sub_files=(bad.sub good.sub)
 
 # NotImplementedError: unsupported output format: sub
 # fixme: the input file should not be processed at all
