@@ -15,6 +15,9 @@ sub_files=(bad.sub good.srt)
 # ok
 #sub_files=(good.srt)
 
+# restore the original files
+./make-test-subs.sh
+
 sub_hashes_a="$(md5sum ${sub_files[@]})"
 echo "$sub_hashes_a"
 
@@ -29,6 +32,3 @@ if [[ "$sub_hashes_a" == "$sub_hashes_b" ]]; then
 else
   echo "ok: all sub files were modified"
 fi
-
-# restore the original files
-./make-test-subs.sh
