@@ -21,6 +21,8 @@ sub_files=(bad.sub good.srt)
 sub_hashes_a="$(md5sum ${sub_files[@]})"
 echo "$sub_hashes_a"
 
+#export PATH=/nix/store/hl1fc3fzly3h1v75bw9kwjzh43z0xff9-ffsubsync-0.4.22-unstable-2023-08-26/bin:$PATH
+
 ffs --overwrite-input video.mp4 -i ${sub_files[@]}
 
 sub_hashes_b="$(md5sum ${sub_files[@]})"
